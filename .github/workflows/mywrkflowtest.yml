@@ -30,6 +30,8 @@ jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
+    envorinement:
+      name: production
     steps:
       - name: Print vars
         run: echo "Hello ${{ vars.DOCKER_USERNAME }}"
