@@ -31,8 +31,11 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
-      - name: Print name
+      - name: Print vars
         run: echo "Hello ${{ vars.DOCKER_USERNAME }}"
+
+      - name: Print secret
+        run: echo "Hello ${{ secrets.DOCKER_USERNAME }}"
 
       - name: Check out the repo
         uses: actions/checkout@v3
