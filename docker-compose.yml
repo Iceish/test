@@ -6,3 +6,5 @@ services:
     command: /bin/sh -c "npm i && node ."
     volumes:
       - ./:/usr/src/app
+    ports: 
+      - 80:80

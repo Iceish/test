@@ -32,12 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - name: Print vars
-        run: echo "Hello ${{ vars.DOCKER_USERNAME }}"
-
-      - name: Print secret
-        run: echo "Hello ${{ secrets.DOCKER_USERNAME }}"
-
       - name: Check out the repo
         uses: actions/checkout@v3
 
